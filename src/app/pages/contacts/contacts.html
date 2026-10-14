@@ -1,0 +1,30 @@
+<h1>{{ 'pages.contacts.title' | translate }}</h1>
+
+<address>
+  <dl>
+    <div>
+      <dt>{{ 'pages.contacts.email' | translate }}</dt>
+      <dd>
+        <a [href]="'mailto:' + contacts.email">{{ contacts.email }}</a>
+      </dd>
+    </div>
+    <div>
+      <dt>{{ 'pages.contacts.phone' | translate }}</dt>
+      <dd>
+        <a [href]="contacts.phone.href">{{ contacts.phone.display }}</a>
+      </dd>
+    </div>
+    <div>
+      <dt>{{ 'pages.contacts.hours' | translate }}</dt>
+      <dd>{{ 'pages.contacts.hoursValue' | translate }}</dd>
+    </div>
+    <div>
+      <dt>{{ 'pages.contacts.address' | translate }}</dt>
+      <dd>
+        {{ 'pages.contacts.addressStreet' | translate }}<br />
+        {{ 'pages.contacts.addressCity' | translate }}<br />
+        {{ 'pages.contacts.addressCountry' | translate }}
+      </dd>
+    </div>
+  </dl>
+</address>

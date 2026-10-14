@@ -4,6 +4,6 @@ import { TranslatePipe } from '../../core/i18n/translate.pipe';
 @Component({
   selector: 'app-not-found',
   imports: [TranslatePipe],
-  template: `<h1>{{ 'pages.notFound.title' | translate }}</h1>`,
+  templateUrl: './not-found.html',
 })
 export class NotFound {}
