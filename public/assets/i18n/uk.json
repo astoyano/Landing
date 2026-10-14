@@ -1,0 +1,20 @@
+{
+  "app": {
+    "name": "Landing",
+    "nav": {
+      "label": "Головна навігація",
+      "home": "Головна",
+      "services": "Послуги",
+      "contacts": "Контакти"
+    },
+    "language": {
+      "label": "Оберіть мову"
+    }
+  },
+  "pages": {
+    "home": { "title": "Головна" },
+    "services": { "title": "Послуги" },
+    "contacts": { "title": "Контакти" },
+    "notFound": { "title": "Сторінку не знайдено" }
+  }
+}

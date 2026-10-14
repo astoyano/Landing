@@ -1,0 +1,20 @@
+{
+  "app": {
+    "name": "Landing",
+    "nav": {
+      "label": "Main navigation",
+      "home": "Home",
+      "services": "Services",
+      "contacts": "Contacts"
+    },
+    "language": {
+      "label": "Choose language"
+    }
+  },
+  "pages": {
+    "home": { "title": "Home" },
+    "services": { "title": "Services" },
+    "contacts": { "title": "Contacts" },
+    "notFound": { "title": "Page not found" }
+  }
+}
