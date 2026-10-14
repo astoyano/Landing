@@ -17,7 +17,7 @@ const LANGUAGE_NAMES: Record<Language, string> = {
         <button
           type="button"
           [attr.lang]="language"
-          [attr.aria-pressed]="language === i18n.language()"
+          [attr.aria-pressed]="language === i18n.language"
           (click)="i18n.setLanguage(language)"
         >
           {{ names[language] }}

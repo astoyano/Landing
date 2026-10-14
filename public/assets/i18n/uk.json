@@ -1,20 +1,12 @@
 {
-  "app": {
-    "name": "Landing",
-    "nav": {
-      "label": "Головна навігація",
-      "home": "Головна",
-      "services": "Послуги",
-      "contacts": "Контакти"
-    },
-    "language": {
-      "label": "Оберіть мову"
-    }
-  },
-  "pages": {
-    "home": { "title": "Головна" },
-    "services": { "title": "Послуги" },
-    "contacts": { "title": "Контакти" },
-    "notFound": { "title": "Сторінку не знайдено" }
-  }
+  "app.name": "Landing",
+  "app.nav.label": "Головна навігація",
+  "app.nav.home": "Головна",
+  "app.nav.services": "Послуги",
+  "app.nav.contacts": "Контакти",
+  "app.language.label": "Оберіть мову",
+  "pages.home.title": "Головна",
+  "pages.services.title": "Послуги",
+  "pages.contacts.title": "Контакти",
+  "pages.notFound.title": "Сторінку не знайдено"
 }

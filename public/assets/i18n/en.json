@@ -1,20 +1,12 @@
 {
-  "app": {
-    "name": "Landing",
-    "nav": {
-      "label": "Main navigation",
-      "home": "Home",
-      "services": "Services",
-      "contacts": "Contacts"
-    },
-    "language": {
-      "label": "Choose language"
-    }
-  },
-  "pages": {
-    "home": { "title": "Home" },
-    "services": { "title": "Services" },
-    "contacts": { "title": "Contacts" },
-    "notFound": { "title": "Page not found" }
-  }
+  "app.name": "Landing",
+  "app.nav.label": "Main navigation",
+  "app.nav.home": "Home",
+  "app.nav.services": "Services",
+  "app.nav.contacts": "Contacts",
+  "app.language.label": "Choose language",
+  "pages.home.title": "Home",
+  "pages.services.title": "Services",
+  "pages.contacts.title": "Contacts",
+  "pages.notFound.title": "Page not found"
 }

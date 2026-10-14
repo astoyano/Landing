@@ -1,7 +1,6 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { TranslatePipe } from './core/i18n/translate.pipe';
-import { TranslationService } from './core/i18n/translation.service';
 import { LanguageSwitcher } from './shared/language-switcher/language-switcher';
 
 @Component({
@@ -11,8 +10,6 @@ import { LanguageSwitcher } from './shared/language-switcher/language-switcher';
   templateUrl: './app.html',
 })
 export class App {
-  protected readonly i18n = inject(TranslationService);
-
   protected readonly navItems = [
     { path: '/', label: 'app.nav.home', exact: true },
     { path: '/services', label: 'app.nav.services', exact: false },
