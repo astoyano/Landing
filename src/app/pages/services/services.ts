@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { TranslatePipe } from '../../core/i18n/translate.pipe';
 import { Card } from '../../shared/card/card';
+import { CtaBanner } from '../../shared/cta-banner/cta-banner';
 
 @Component({
   selector: 'app-services',
-  imports: [TranslatePipe, Card],
+  imports: [TranslatePipe, Card, CtaBanner],
   templateUrl: './services.html',
   styleUrl: './services.scss',
 })

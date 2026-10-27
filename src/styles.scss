@@ -5,21 +5,166 @@ html {
   @include mat.theme(
     (
       color: (
-        primary: mat.$azure-palette,
-        tertiary: mat.$blue-palette,
+        primary: mat.$blue-palette,
+        tertiary: mat.$orange-palette,
       ),
       typography: Roboto,
       density: 0,
     )
   );
+
+  // Brand colors. Orange shades are paired with dark text or used decoratively;
+  // `--brand-orange-text` is the shade that meets AA contrast on white.
+  --brand-blue-950: #172554;
+  --brand-blue-800: #1e40af;
+  --brand-blue-700: #1d4ed8;
+  --brand-blue-100: #dbeafe;
+  --brand-blue-50: #f3f7ff;
+  --brand-orange: #f97316;
+  --brand-orange-light: #fdba74;
+  --brand-orange-text: #c2410c;
+  --brand-ink: #0f172a;
+  --brand-muted: #475569;
+  --brand-white: #fff;
+  --focus-ring: var(--brand-orange-text);
+
+  scroll-behavior: smooth;
+
+  @media (prefers-reduced-motion: reduce) {
+    scroll-behavior: auto;
+  }
 }
 
 body {
   color-scheme: light;
-  background-color: var(--mat-sys-surface);
-  color: var(--mat-sys-on-surface);
-  font: var(--mat-sys-body-medium);
+  background-color: var(--brand-white);
+  color: var(--brand-ink);
+  font: var(--mat-sys-body-large);
 
   margin: 0;
-  height: 100%;
+  min-height: 100%;
+}
+
+h1,
+h2,
+h3 {
+  color: inherit;
+  line-height: 1.2;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+// Dark (blue) backgrounds switch the focus ring to white.
+.on-dark {
+  --focus-ring: var(--brand-white);
+}
+
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding-inline: 1.5rem;
+}
+
+.section {
+  padding-block: clamp(3rem, 8vw, 5.5rem);
+
+  &--tinted {
+    background: var(--brand-blue-50);
+  }
+}
+
+.section-title {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 500;
+  color: var(--brand-blue-950);
+}
+
+.section-lead {
+  max-width: 60ch;
+  margin: 0 0 2.5rem;
+  color: var(--brand-muted);
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand-orange-text);
+
+  .on-dark & {
+    color: var(--brand-orange-light);
+  }
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 48px;
+  padding: 0 1.5rem;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+
+  &--accent {
+    background: var(--brand-orange);
+    color: var(--brand-ink);
+
+    &:hover {
+      background: var(--brand-orange-light);
+    }
+  }
+
+  &--primary {
+    background: var(--brand-blue-700);
+    color: var(--brand-white);
+
+    &:hover {
+      background: var(--brand-blue-800);
+    }
+  }
+
+  &--ghost {
+    border-color: currentColor;
+    background: transparent;
+    color: inherit;
+
+    &:hover {
+      background: var(--brand-white);
+      border-color: var(--brand-white);
+      color: var(--brand-blue-800);
+    }
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
 }

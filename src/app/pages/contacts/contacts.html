@@ -1,30 +1,49 @@
-<h1>{{ 'pages.contacts.title' | translate }}</h1>
+<section class="section" aria-labelledby="contacts-title">
+  <div class="container layout">
+    <div>
+      <p class="eyebrow">{{ 'pages.contacts.eyebrow' | translate }}</p>
+      <h1 id="contacts-title" class="section-title">{{ 'pages.contacts.title' | translate }}</h1>
+      <p class="section-lead">{{ 'pages.contacts.lead' | translate }}</p>
+      <div class="actions">
+        <a class="btn btn--accent" [href]="'mailto:' + profile.email">
+          {{ 'pages.contacts.write' | translate }}
+        </a>
+        <a class="btn btn--primary" [href]="profile.phone.href">
+          {{ 'pages.contacts.call' | translate }}
+        </a>
+      </div>
 
-<address>
-  <dl>
-    <div>
-      <dt>{{ 'pages.contacts.email' | translate }}</dt>
-      <dd>
-        <a [href]="'mailto:' + contacts.email">{{ contacts.email }}</a>
-      </dd>
+      <h2 class="socials-title">{{ 'pages.contacts.socials' | translate }}</h2>
+      <app-social-links class="socials" />
     </div>
-    <div>
-      <dt>{{ 'pages.contacts.phone' | translate }}</dt>
-      <dd>
-        <a [href]="contacts.phone.href">{{ contacts.phone.display }}</a>
-      </dd>
-    </div>
-    <div>
-      <dt>{{ 'pages.contacts.hours' | translate }}</dt>
-      <dd>{{ 'pages.contacts.hoursValue' | translate }}</dd>
-    </div>
-    <div>
-      <dt>{{ 'pages.contacts.address' | translate }}</dt>
-      <dd>
-        {{ 'pages.contacts.addressStreet' | translate }}<br />
-        {{ 'pages.contacts.addressCity' | translate }}<br />
-        {{ 'pages.contacts.addressCountry' | translate }}
-      </dd>
-    </div>
-  </dl>
-</address>
+
+    <address class="details">
+      <dl>
+        <div>
+          <dt>{{ 'pages.contacts.email' | translate }}</dt>
+          <dd>
+            <a [href]="'mailto:' + profile.email">{{ profile.email }}</a>
+          </dd>
+        </div>
+        <div>
+          <dt>{{ 'pages.contacts.phone' | translate }}</dt>
+          <dd>
+            <a [href]="profile.phone.href">{{ profile.phone.display }}</a>
+          </dd>
+        </div>
+        <div>
+          <dt>{{ 'pages.contacts.hours' | translate }}</dt>
+          <dd>{{ 'pages.contacts.hoursValue' | translate }}</dd>
+        </div>
+        <div>
+          <dt>{{ 'pages.contacts.address' | translate }}</dt>
+          <dd>
+            {{ 'pages.contacts.addressStreet' | translate }}<br />
+            {{ 'pages.contacts.addressCity' | translate }}<br />
+            {{ 'pages.contacts.addressCountry' | translate }}
+          </dd>
+        </div>
+      </dl>
+    </address>
+  </div>
+</section>

@@ -1,1 +1,8 @@
-<h1>{{ 'pages.notFound.title' | translate }}</h1>
+<section class="section" aria-labelledby="not-found-title">
+  <div class="container not-found">
+    <p class="code" aria-hidden="true">404</p>
+    <h1 id="not-found-title" class="section-title">{{ 'pages.notFound.title' | translate }}</h1>
+    <p class="section-lead">{{ 'pages.notFound.text' | translate }}</p>
+    <a class="btn btn--primary" routerLink="/">{{ 'pages.notFound.back' | translate }}</a>
+  </div>
+</section>

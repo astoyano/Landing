@@ -1,13 +1,22 @@
-<h1>{{ 'pages.services.title' | translate }}</h1>
+<section class="section" aria-labelledby="services-title">
+  <div class="container">
+    <p class="eyebrow">{{ 'pages.services.eyebrow' | translate }}</p>
+    <h1 id="services-title" class="section-title">{{ 'pages.services.title' | translate }}</h1>
+    <p class="section-lead">{{ 'pages.services.lead' | translate }}</p>
 
-<ul class="cards">
-  @for (service of services; track service.id) {
-    <li>
-      <app-card class="card-cmp"
-        [title]="service.title | translate"
-        [description]="service.description | translate"
-        [imageSrc]="service.image"
-      />
-    </li>
-  }
-</ul>
+    <ul class="cards">
+      @for (service of services; track service.id) {
+        <li>
+          <app-card
+            class="card-cmp"
+            [title]="service.title | translate"
+            [description]="service.description | translate"
+            [imageSrc]="service.image"
+          />
+        </li>
+      }
+    </ul>
+  </div>
+</section>
+
+<app-cta-banner />
